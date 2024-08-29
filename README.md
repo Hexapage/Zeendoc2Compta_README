@@ -2,7 +2,7 @@
 
 ## Configuration des fichiers et des chemins
 
-1. Placement des fichiers de configuration :
+1. Emplacement des fichiers de configuration :
     - Les fichiers `ordre_comptable.xml` et `configuration.xml` doivent être placés dans le même dossier.
 2. Utilisation des flags pour les chemins de fichiers :
     - Lors de l'utilisation des flags tels que `-config-path`, `-log-path` ou `-ecritures-path`, les chemins de fichiers doivent être encadrés par des guillemets doubles (").
@@ -17,6 +17,8 @@
     - `-ecritures-path` :
         - Ce chemin doit inclure le nom complet du fichier d’écriture.
         - Exemple : `-ecritures-path "chemin\du\fichier.txt"`
+     
+Exemple d'execution en ligne de commande : Zeendoc2compta.exe --config-path "C:\Zeendoc\conf" --log-path "C:\Zeendoc\log" --ecritures-path "C:\Zeendoc\ecritures"
 
 ---
 
