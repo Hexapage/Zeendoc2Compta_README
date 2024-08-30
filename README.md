@@ -18,7 +18,7 @@
         - Ce chemin doit inclure le nom complet du fichier d’écriture.
         - Exemple : `-ecritures-path "chemin\du\fichier.txt"`
      
-Exemple d'execution en ligne de commande : Zeendoc2compta.exe --config-path "C:\Zeendoc\conf" --log-path "C:\Zeendoc\log" --ecritures-path "C:\Zeendoc\ecritures"
+Exemple d'execution en ligne de commande : .\Zeendoc2Compta.exe --config-path "C:\Zeendoc\conf" --log-path "C:\Zeendoc\log\log.txt" --ecritures-path "C:\Zeendoc\ecritures"
 
 ---
 
