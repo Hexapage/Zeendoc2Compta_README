@@ -26,7 +26,7 @@ Exemple d'execution en ligne de commande : `.\Zeendoc2Compta.exe --config-path "
 
 ### Paramètre fixes
 
-`#indexOrdre` : index d’ordonnancement des lignes par facture. Reviens à 1 lors d’une nouvelle facture
+`#indexOrd` : index d’ordonnancement des lignes par facture. Reviens à 1 lors d’une nouvelle facture
 
 `#compLibelle` concatène le complément libelle au libellé de la ventilation
 
