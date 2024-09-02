@@ -5,20 +5,21 @@
 1. Emplacement des fichiers de configuration :
     - Les fichiers `ordre_comptable.xml` et `configuration.xml` doivent être placés dans le même dossier.
 2. Utilisation des flags pour les chemins de fichiers :
-    - Lors de l'utilisation des flags tels que `-config-path`, `-log-path` ou `-ecritures-path`, les chemins de fichiers doivent être encadrés par des guillemets doubles (").
-    - Exemple : `-config-path "chemin\de\conf"`
+    - Lors de l'utilisation des flags tels que `--config-path`, `--log-path` ou `--ecritures-path`, les chemins de fichiers doivent être encadrés par des guillemets doubles (").
+    - Exemple : `--config-path "chemin\de\conf"`
 3. Spécificités pour chaque flag :
-    - `-config-path` :
+    - `--config-path` :
         - Ce flag doit uniquement contenir le chemin du dossier contenant les fichiers de configuration.
         - Exemple : `-config-path "chemin\de\conf\"`
-    - `-log-path` :
+    - `--log-path` :
         - Ce chemin doit inclure le nom complet du fichier de log.
         - Exemple : `-log-path "chemin\du\fichier.txt"`
-    - `-ecritures-path` :
+    - `--ecritures-path` :
         - Ce chemin doit inclure le nom complet du fichier d’écriture.
-        - Exemple : `-ecritures-path "chemin\du\fichier.txt"`
+        - Exemple : `--ecritures-path "chemin\du\fichier.txt"`
      
-Exemple d'execution en ligne de commande : `.\Zeendoc2Compta.exe --config-path "C:\Zeendoc\conf" --log-path "C:\Zeendoc\log\log.txt" --ecritures-path "C:\Zeendoc\ecritures"`
+Exemple d'execution en ligne de commande :<br />
+`.\Zeendoc2Compta.exe --config-path "C:\Zeendoc\conf" --log-path "C:\Zeendoc\log\log.txt" --ecritures-path "C:\Zeendoc\ecritures"`
 
 ---
 
@@ -26,11 +27,21 @@ Exemple d'execution en ligne de commande : `.\Zeendoc2Compta.exe --config-path "
 
 ### Paramètre fixes
 
-`#indexOrd` : index d’ordonnancement des lignes par facture. Reviens à 1 lors d’une nouvelle facture
+`#indexOrd` : index d’ordonnancement des lignes par pièce comptable.
+Reviens à 1 lors d’une nouvelle pièce.
+Exemple : <br />
+1;FA0FE897;ACH-ACHATS;Facture;22-06-17;31082017;Bijou;531.04;40100002;<br />
+2;FA0FE897;ACH-ACHATS;22-06-17;60701000;FA0FE897;Bijou_testcomplib_Comp_lib_1;MontantHT;233.32<br />
+3;FA0FE897;ACH-ACHATS;22-06-17;60700000;FA0FE897;Bijou_testcomplib_Comp_lib_2;MontantHT;297.72<br />
+4;FA0FE897;ACH-ACHATS;22-06-17;4456601;FA0FE897;Bijou_testcomplib_;ImputationTVA;46.67<br />
+5;FA0FE897;ACH-ACHATS;22-06-17;4456601;FA0FE897;Bijou_testcomplib_;ImputationTVA;59.54<br />
+1;FA0283723;ACH-ACHATS;Facture;22-06-17;31082017;Bijou;531.04;40100002;<br />
+2;FA0283723;ACH-ACHATS;22-06-17;60701000;FA0283723;Bijou_testcomplib_;MontantHT;233.32<br />
+3;FA0283723;ACH-ACHATS;22-06-17;60700000;FA0283723;Bijou_testcomplib_;MontantHT;297.72<br />
+4;FA0283723;ACH-ACHATS;22-06-17;4456601;FA0283723;Bijou_testcomplib_;ImputationTVA;46.67<br />
+5;FA0283723;ACH-ACHATS;22-06-17;4456601;FA0283723;Bijou_testcomplib_;ImputationTVA;59.54<br />
 
 `#compLibelle` concatène le complément libelle au libellé de la ventilation
-
-`#indexOrd` Index d’ordonnancement 
 
 ## Balises et structure des données
 
